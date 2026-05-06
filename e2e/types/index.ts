@@ -15,4 +15,4 @@ export interface LoginCredentials {
     password: string
 }
 
-export type ChannelType = 'whatsapp' | 'telegram' | 'max' | 'telegram-bot' | 'sms'
+export type ChannelType = 'whatsapp' | 'telegram' | 'max' | 'telegram-bot' | 'sms' | 'vk'
