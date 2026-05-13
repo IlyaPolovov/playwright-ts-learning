@@ -7,7 +7,13 @@ export interface RegistrationData {
     agreedToOffer: boolean
 }
 
-export type LoginForm = Pick<RegistrationData, 'email' | 'phone' | 'password'>
+
+export type BaseAuth = Pick<RegistrationData, 'password'>
+export type LoginByEmail = BaseAuth & Pick<RegistrationData, 'email'>
+export type LoginByPhone = BaseAuth & Pick<RegistrationData, 'phone'>
+// export type LoginForm = 
+//   | (BaseAuth & Pick<RegistrationData, 'email'>) 
+//   | (BaseAuth & Pick<RegistrationData, 'phone'>)
 
 export type Email = string
 export type Phone = string
@@ -17,7 +23,7 @@ export interface LoginCredentials {
     password: string
 }
 
-export type ChannelType = 'whatsapp' | 'telegram' | 'max' | 'telegram-bot' | 'sms' | 'vk'
+export type ChannelType = 'whatsapp' | 'telegram' | 'max' | 'telegram-bot' | 'sms' | 'vk' | 'ok'
 
 export interface ApiResponse<T> {
   success: boolean
@@ -26,4 +32,4 @@ export interface ApiResponse<T> {
   data: T
 }
 
-export type UserResponse = ApiResponse<User>;
+//export type UserResponse = ApiResponse<User>;

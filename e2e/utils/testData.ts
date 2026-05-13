@@ -1,11 +1,23 @@
-function generateRegistrationData(): RegistrationData {
+import type { RegistrationData, LoginByEmail, LoginByPhone } from '@e2e/types';
+export function generateRegistrationData(): RegistrationData {
   return { 
-    email: string
-    phone: string
-    password: string
-    passwordConfirmation: string
-    agreedToPersonalData: boolean
-    agreedToOffer: boolean
+    email: "dmi@pushsms.ru",
+    phone: "79888846453",
+    password: "ValidPass123!",
+    passwordConfirmation: "ValidPass123!",
+    agreedToPersonalData: true,
+    agreedToOffer: true,
   }
 }
-
+export function generateLoginDataByEmail(): LoginByEmail {
+  return { 
+    email: "dmi@pushsms.ru",
+    password: "ValidPass123!",
+  }
+}
+export function generateLoginDataByPhone(): LoginByPhone {
+  return { 
+    phone: "79888846453",
+    password: "ValidPass123!",
+  }
+}
